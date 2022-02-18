@@ -31,8 +31,10 @@ for key, val in all_files.items():
         dst_full_path = sub_dir + "\\" + file
         print("src_full_path:", src_full_path)
         print("dst_full_path:", dst_full_path)
-        fobj_in = open(src_full_path, "r+", encoding = 'utf-8', errors='ignore')
-        fobj_out = open(dst_full_path, "w+", encoding = 'utf-8', errors='ignore')
+        # fobj_in = open(src_full_path, "r+", encoding = 'utf-8', errors='ignore')
+        # fobj_out = open(dst_full_path, "w+", encoding = 'utf-8', errors='ignore')
+        fobj_in = open(src_full_path, "rb+")
+        fobj_out = open(dst_full_path, "wb+")
 
         while True:
             buf = fobj_in.read()
